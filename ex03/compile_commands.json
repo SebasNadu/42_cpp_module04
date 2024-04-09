@@ -1,0 +1,110 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-I",
+      "include",
+      "-c",
+      "-o",
+      "obj/main.o",
+      "src/main.cpp"
+    ],
+    "directory": "/Users/sebasnadu/code/SebasNadu/42_cpp_module04/ex03",
+    "file": "/Users/sebasnadu/code/SebasNadu/42_cpp_module04/ex03/src/main.cpp",
+    "output": "/Users/sebasnadu/code/SebasNadu/42_cpp_module04/ex03/obj/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-I",
+      "include",
+      "-c",
+      "-o",
+      "obj/AMateria.o",
+      "src/AMateria.cpp"
+    ],
+    "directory": "/Users/sebasnadu/code/SebasNadu/42_cpp_module04/ex03",
+    "file": "/Users/sebasnadu/code/SebasNadu/42_cpp_module04/ex03/src/AMateria.cpp",
+    "output": "/Users/sebasnadu/code/SebasNadu/42_cpp_module04/ex03/obj/AMateria.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-I",
+      "include",
+      "-c",
+      "-o",
+      "obj/Cure.o",
+      "src/Cure.cpp"
+    ],
+    "directory": "/Users/sebasnadu/code/SebasNadu/42_cpp_module04/ex03",
+    "file": "/Users/sebasnadu/code/SebasNadu/42_cpp_module04/ex03/src/Cure.cpp",
+    "output": "/Users/sebasnadu/code/SebasNadu/42_cpp_module04/ex03/obj/Cure.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-I",
+      "include",
+      "-c",
+      "-o",
+      "obj/Ice.o",
+      "src/Ice.cpp"
+    ],
+    "directory": "/Users/sebasnadu/code/SebasNadu/42_cpp_module04/ex03",
+    "file": "/Users/sebasnadu/code/SebasNadu/42_cpp_module04/ex03/src/Ice.cpp",
+    "output": "/Users/sebasnadu/code/SebasNadu/42_cpp_module04/ex03/obj/Ice.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-I",
+      "include",
+      "-c",
+      "-o",
+      "obj/Character.o",
+      "src/Character.cpp"
+    ],
+    "directory": "/Users/sebasnadu/code/SebasNadu/42_cpp_module04/ex03",
+    "file": "/Users/sebasnadu/code/SebasNadu/42_cpp_module04/ex03/src/Character.cpp",
+    "output": "/Users/sebasnadu/code/SebasNadu/42_cpp_module04/ex03/obj/Character.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-I",
+      "include",
+      "-c",
+      "-o",
+      "obj/MateriaSource.o",
+      "src/MateriaSource.cpp"
+    ],
+    "directory": "/Users/sebasnadu/code/SebasNadu/42_cpp_module04/ex03",
+    "file": "/Users/sebasnadu/code/SebasNadu/42_cpp_module04/ex03/src/MateriaSource.cpp",
+    "output": "/Users/sebasnadu/code/SebasNadu/42_cpp_module04/ex03/obj/MateriaSource.o"
+  }
+]
