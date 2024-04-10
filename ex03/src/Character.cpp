@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Character.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sebasnadu <johnavar@student.42berlin.de>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/10 16:20:59 by sebasnadu         #+#    #+#             */
+/*   Updated: 2024/04/10 16:21:00 by sebasnadu        ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Character.hpp"
 #include "colors.hpp"
 #include <iostream>
@@ -11,6 +23,7 @@ Character::Character() : _name("default") {
 Character::Character(Character const &src) {
   std::cout << BLU << "Character copy constructor called" << CRESET
             << std::endl;
+  this->_initInventory();
   *this = src;
 }
 
@@ -32,13 +45,16 @@ Character &Character::operator=(Character const &rhs) {
     this->_name = rhs._name;
     this->_deleteInventory();
     for (int i = 0; i < this->_maxInventory; i++) {
-      this->_inventory[i] = rhs._inventory[i]->clone();
+      if (rhs._inventory[i] != NULL)
+        this->_inventory[i] = rhs._inventory[i]->clone();
     }
   }
   return *this;
 }
 
 std::string const &Character::getName() const { return this->_name; }
+
+void Character::setName(std::string const &name) { this->_name = name; }
 
 void Character::equip(AMateria *m) {
   if (m == NULL) {
@@ -59,7 +75,7 @@ void Character::equip(AMateria *m) {
 }
 
 void Character::unequip(int idx) {
-  if (idx < 0 || idx > this->_maxInventory) {
+  if (idx < 0 || idx >= this->_maxInventory) {
     std::cout << RED << this->_name
               << ": I cannot unequip a materia that is not in the inventory. "
               << idx << " is not a valid index." << CRESET << std::endl;
@@ -80,7 +96,7 @@ void Character::unequip(int idx) {
 }
 
 void Character::use(int idx, ICharacter &target) {
-  if (idx < 0 || idx > this->_maxInventory) {
+  if (idx < 0 || idx >= this->_maxInventory) {
     std::cout << RED << this->_name
               << ": I cannot use materia that is not in the inventory. " << idx
               << " is not a valid index." << CRESET << std::endl;
@@ -105,5 +121,16 @@ void Character::_initInventory() {
 void Character::_deleteInventory() {
   for (int i = 0; i < this->_maxInventory; i++) {
     delete this->_inventory[i];
+  }
+}
+
+void Character::displayInventory() const {
+  std::cout << BLU << this->_name << ": Inventory display" << std::endl;
+  for (int i = 0; i < this->_maxInventory; i++) {
+    std::cout << BLU << "\tSlot [" << i << "]: ";
+    if (this->_inventory[i] == NULL)
+      std::cout << YEL << "Empty slot" << CRESET << std::endl;
+    else
+      std::cout << GRN << this->_inventory[i]->getType() << CRESET << std::endl;
   }
 }
