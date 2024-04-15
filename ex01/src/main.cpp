@@ -6,7 +6,7 @@
 /*   By: sebasnadu <johnavar@student.42berlin.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:06:17 by sebasnadu         #+#    #+#             */
-/*   Updated: 2024/04/08 17:28:02 by sebasnadu        ###   ########.fr       */
+/*   Updated: 2024/04/15 16:21:30 by johnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "Cat.hpp"
 #include "Dog.hpp"
 #include <iostream>
+#include <sstream>
 
 int main() {
   const Animal *j = new Dog();
@@ -44,9 +45,14 @@ int main() {
   std::cout << "Cat and Dogs Ideas\n" << std::endl;
   Cat *cat = new Cat();
   Dog *dog = new Dog();
+  std::stringstream ss;
   for (int i = 0; i < 10; i++) {
-    cat->getBrain()->setIdea(i, "Cat idea " + std::to_string(i));
-    dog->getBrain()->setIdea(i, "Dog idea " + std::to_string(i));
+    ss << "Cat idea " << i;
+    cat->getBrain()->setIdea(i, ss.str());
+    ss.str("");
+    ss << "Dog idea " << i;
+    dog->getBrain()->setIdea(i, ss.str());
+    ss.str("");
   }
 
   Cat *catCopy = new Cat(*cat);
@@ -59,8 +65,12 @@ int main() {
   }
 
   for (int i = 0; i < 10; i++) {
-    cat->getBrain()->setIdea(i, "Cat new idea " + std::to_string(i));
-    dog->getBrain()->setIdea(i, "Dog new idea " + std::to_string(i));
+    ss << "Cat new idea " << i;
+    cat->getBrain()->setIdea(i, ss.str());
+    ss.str("");
+    ss << "Dog new idea " << i;
+    dog->getBrain()->setIdea(i, ss.str());
+    ss.str("");
   }
 
   std::cout << std::endl;

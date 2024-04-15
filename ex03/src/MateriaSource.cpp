@@ -6,7 +6,7 @@
 /*   By: sebasnadu <johnavar@student.42berlin.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 16:20:53 by sebasnadu         #+#    #+#             */
-/*   Updated: 2024/04/10 16:20:55 by sebasnadu        ###   ########.fr       */
+/*   Updated: 2024/04/15 16:50:21 by johnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ void MateriaSource::learnMateria(AMateria *m) {
   }
   std::cout << RED << "MateriaSource: The materials are full" << CRESET
             << std::endl;
+  delete m;
 }
 
 AMateria *MateriaSource::createMateria(std::string const &type) {

@@ -6,7 +6,7 @@
 /*   By: sebasnadu <johnavar@student.42berlin.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 16:20:25 by sebasnadu         #+#    #+#             */
-/*   Updated: 2024/04/10 16:45:20 by sebasnadu        ###   ########.fr       */
+/*   Updated: 2024/04/15 16:56:00 by johnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,7 +141,7 @@ void testMateriaSource(void) {
   std::cout << "\nMateria Source learning to many materials..." << std::endl;
   source->displayMaterials();
   source->learnMateria(new Ice());
-  source->learnMateria(new Cure());
+  source->learnMateria(new Cure);
   source->displayMaterials();
 
   std::cout << "\nCreating new materials..." << std::endl;
